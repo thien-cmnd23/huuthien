@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace quanlynhansucty
+{
+    class Employee : Person
+    {
+        string qualification;
+        public new void Accept(string id)
+        {
+            base.Accept(id);
+            Console.Write("Nhập bằng cấp: ");
+            this.qualification = Console.ReadLine();
+            Console.WriteLine("Đã nhập xong");
+        }
+        public new void Display()
+        {
+            Console.WriteLine("*****");
+            base.Display();
+            Console.WriteLine("Bằng cấp {0}, qualification");
+            Console.WriteLine("*****");
+        }
+
+    }
+}
